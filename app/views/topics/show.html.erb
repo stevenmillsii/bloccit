@@ -8,12 +8,15 @@
   <div class="col-md-8">
     <p class="lead"><%= @topic.description %></p>
 
-    <% @topic.sponsored_posts.each do |post| %>
+    <% @topic.sponsored_post.each do |post| %>
       <div class="media">
         <div class="media-body">
           <h3 class="media-heading">
-            <%= link_to sponsored_posts.title, topic_sponsored_post_path(@topic, sponsored_posts) %>
+            <%= link_to sponsored_post.title, topic_sponsored_post_path(@topic, sponsored_post) %>
           </h3>
+          <small>
+            Sponsored Post
+          </small>
         </div>
       </div>
     <% end %>

@@ -2,10 +2,13 @@ require 'rails_helper'
 
 RSpec.describe SponsoredPost, type: :model do
 
+  let(:name) { RandomData.random_sentence }
+  let(:description) { RandomData.random_paragraph }
   let(:title) { RandomData.random_sentence }
   let(:body) { RandomData.random_paragraph }
   let(:price) { 99 }
-  let(:sponsored_post) { SponsoredPost.create!(title: title, body: body, price: price) }
+  let(:topic) { Topic.create!(name: name, description: description) }
+  let(:sponsored_post) { topic.sponsored_post.create!(title: title, body: body, price: price) }
 
   it { is_expected.to belong_to(:topic) }
 
