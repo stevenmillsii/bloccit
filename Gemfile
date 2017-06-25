@@ -33,3 +33,5 @@ gem 'turbolinks'
 gem 'bootstrap-sass'
 # Adding Pry Rails
 gem 'pry-rails', :group => :development
+# Used for encrypting User passwords
+gem 'bcrypt'
