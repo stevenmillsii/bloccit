@@ -35,3 +35,5 @@ gem 'bootstrap-sass'
 gem 'pry-rails', :group => :development
 # Used for encrypting User passwords
 gem 'bcrypt'
+# Adding Figaro for handling sensitive information
+gem 'figaro', '1.0'
